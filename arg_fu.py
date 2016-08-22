@@ -20,16 +20,14 @@ def add_action(switch,func,info=None):
 
 def do_action(k,v):
 	'''
-	
-	heads up, unknown args are ignored.
-
+	heads up, unknown switches are ignored.
 	./myscript.py -p hello call the print function with one argument "hello"
-
 	'''
 	if v is not '':
 		actions[k](v)
 	else:
 		actions[k]()
+
 
 def show_help():
 	switches=list(help_mesgs.keys())
@@ -41,7 +39,6 @@ def show_help():
 		print(switches[l],' ',mesgs[l])
 		
 		
-						
 def process(data=sys.argv,ordered=None):
 	'''
 	call args.process in your script to process the command line 
