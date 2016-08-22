@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 
-'''
-
-arg_fu is py2py3
-
-'''
 
 import sys
-import re
 
 actions={}
 
