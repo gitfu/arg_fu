@@ -1,11 +1,11 @@
 # arg_fu
 Python command line argument parser, super clean, super easy, and chicks dig it.
 
-# How to use:
+### How to use:
 
 ```
 import arg_fu
-
+```
 
 * add switches to parse like this 
 ```
