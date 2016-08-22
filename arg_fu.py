@@ -12,10 +12,8 @@ def add_action(switch,func,info=None):
     add an action to be performed.  ex. args.add_action("-p",print)
     long form args work too.    ex. args.add_action('--print',print)
     '''
-    if switch.startswith('-'):
-        actions[switch]=func
-        if info: help_mesgs[switch]=info
-    else:  raise Exception('switches start with -')    
+    actions[switch]=func
+    if info: help_mesgs[switch]=info
 
 def do_action(k,v):
     '''
