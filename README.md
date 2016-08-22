@@ -30,7 +30,7 @@ arg_fu.process()
 ```
 
 * -h and --help display switches and their help messages
-```python
+```
 # python arg_test.py  -h
 
 -p   Show This
