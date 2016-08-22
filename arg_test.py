@@ -5,6 +5,3 @@ arg_fu.add_action('--print',print," long print stuff")
 
 arg_fu.process()
 
-print ("now with ordered")
-
-arg_fu.process(ordered=['--print','-p'])
