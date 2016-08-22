@@ -3,12 +3,12 @@ Python command line argument parser, super clean, super easy, and chicks dig it.
 
 ### How to use:
 
-```
+```python
 import arg_fu
 ```
 
 * add switches to parse, and a function to call like this 
-```
+```python
 arg_fu.add_action('-p',print)
 ```
 
@@ -16,21 +16,21 @@ arg_fu.add_action('-p',print)
 
 
 * add an option help message
-```
+```python
 arg_fu.add_action('-p',print,"print stuff")
 ```
 
 * add a long form and a help message
-``` 
+```python
 arg_fu.add_action('--print',print,"print stuff")
 ```
 * call arg_fu.process() to process args
-```
+```python
 arg_fu.process()
 ```
 
 * -h and --help display switches and their help messages
-```
+```python
 # python arg_test.py  -h
 
 -p   Show This
@@ -41,7 +41,7 @@ arg_fu.process()
 ```
 
 * Set the order in which the switches are processed with the optional ordered list of switches
-```
+```python
 
 arg_fu.process(ordered=['--print','-p'])
 
