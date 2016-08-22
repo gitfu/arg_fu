@@ -7,13 +7,13 @@ Python command line argument parser, super clean, super easy, and chicks dig it.
 import arg_fu
 ```
 
-* add switches to parse like this 
+* add switches to parse, and a function to call like this 
 ```
 arg_fu.add_action('-p',print)
 ```
-```
-ex. myscript.py -p hello calls print("hello") 
-```
+
+* ex. myscript.py -p hello calls print("hello") 
+
 
 * add an option help message
 ```
@@ -41,8 +41,10 @@ arg_fu.process()
 ```
 
 * Set the order in which the switches are processed with the optional ordered list of switches
-``
+```
+
 arg_fu.process(ordered=['--print','-p'])
+
 ```
 
 That's it. 
