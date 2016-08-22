@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
-
 import sys
 
 actions={}
 
-help={'-h': 'Show This',
+help_mesgs={'-h': 'Show This',
 	'--help':'Show This'}
 	
 def add_action(switch,func,info=None):
@@ -16,7 +15,7 @@ def add_action(switch,func,info=None):
 	sw=switch
 	actions[sw]=func
 	if info:
-		help[switch]=info
+		help_mesgs[switch]=info
 		
 
 def do_action(k,v):
@@ -33,8 +32,8 @@ def do_action(k,v):
 		actions[k]()
 
 def show_help():
-	switches=list(help.keys())
-	mesgs=list(help.values())
+	switches=list(help_mesgs.keys())
+	mesgs=list(help_mesgs.values())
 	switches.sort()
 	l=len(switches)
 	while l >0:
