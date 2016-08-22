@@ -2,41 +2,42 @@
 Python command line argument parser, super clean, super easy, and chicks dig it.
 
 ### How to use:
-
+* Add a switch, a function to call, and an optional help message.
 ```python
-import arg_fu
+
+arg_fu.add_action(switch, func, help_mesg)
+
 ```
 
-* add switches to parse, and a function to call like this 
+* Process commandline 
 ```python
-arg_fu.add_action('-p',print)
-```
 
-* ex. myscript.py -p hello calls print("hello") 
-
-
-* add an option help message
-```python
-arg_fu.add_action('-p',print,"print stuff")
-```
-
-* add a long form and a help message
-```python
-arg_fu.add_action('--print',print,"print stuff")
-```
-* call arg_fu.process() to process args
-```python
 arg_fu.process()
+
 ```
+* Example
+ 
+```python
+
+import arg_fu
+arg_fu.add_action('-p',print)
+arg_fu.add_action('--print',print,"print stuff")
+
+arg_fu.process()
+
+```
+* ex. myscript.py -p hello calls print("hello") 
 
 * -h and --help display switches and their help messages
 ```
+
 # python arg_test.py  -h
 
 -p   Show This
 -h   print stuff
 --print   print stuff
 --help   Show This
+
 
 ```
 
@@ -47,24 +48,18 @@ arg_fu.process(ordered=['--print','-p'])
 
 ```
 
-That's it. 
-
-* full working example
+*  working example
 
 ```python
 
-
-import arg_fu
-
-arg_fu.add_action('-p',print,"print stuff")
-arg_fu.add_action('--print',print,"print stuff")
-
-arg_fu.process()
-
 print ("now with ordered \n")
+
+arg_fu.add_action('--p',print,"print stuff")
+arg_fu.add_action('--print',print,"print stuff")
 
 arg_fu.process(ordered=['--print','-p'])
 
+```
 
 ```
 
