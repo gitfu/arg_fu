@@ -20,6 +20,7 @@ arg_fu.process()
 ```python
 
 import arg_fu
+
 arg_fu.add_action('-p',print)
 arg_fu.add_action('--print',print,"print stuff")
 
@@ -48,16 +49,20 @@ arg_fu.process(ordered=['--print','-p'])
 
 ```
 
-*  working example
+*  working example with ordered switches
 
 ```python
 
-print ("now with ordered \n")
+import arg_fu
+
 
 arg_fu.add_action('--p',print,"print stuff")
 arg_fu.add_action('--print',print,"print stuff")
 
+print ("now with ordered \n")
+
 arg_fu.process(ordered=['--print','-p'])
+
 
 ```
 
