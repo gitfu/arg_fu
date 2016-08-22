@@ -26,12 +26,12 @@ def do_action(k,v):
 
 def show_help():
     switches=list(help_mesgs.keys())
-    mesgs=list(help_mesgs.values())
+    #mesgs=list(help_mesgs.values())
     switches.sort()
     l=len(switches)
     while l >0:
         l-=1
-        print(switches[l],' ',mesgs[l])
+        print(switches[l],' ',help_mesgs[switches[l]])
 
         
 def process(data=sys.argv,ordered=None):
