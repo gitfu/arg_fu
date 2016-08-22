@@ -2,7 +2,9 @@
 
 import sys
 
+
 actions={}
+	
 
 help_mesgs={'-h': 'Show This',
 	'--help':'Show This'}
@@ -37,7 +39,7 @@ def show_help():
 	while l >0:
 		l-=1
 		print(switches[l],' ',mesgs[l])
-		
+
 		
 def process(data=sys.argv,ordered=None):
 	'''
@@ -46,15 +48,16 @@ def process(data=sys.argv,ordered=None):
 	@ordered is a list to set order that args are processed ex. ['--print','-f','--with-cheese'] 
 	Supports complex args like -f movie='fu.ts'[out0+subcc], however, quotes need escaping to preserve them.
 	'''
-	args=" ".join(data)
+	data=" ".join(data)
 	if type(ordered) is not list:
 		ordered =actions.keys()
-	if '-h' or '--help' in args:
-		show_help()
-		sys.exit()
-	for switch in ordered:
-		sa=args.split(" "+switch)[1:]
-		for a in sa:
-			v=a.split('-')[0]
-			do_action(switch,v)
+	
+	if '-h'in data or '--help' in data:
+		show_help()	
+	else:	
+		for switch in ordered:
+			sa=data.split(" "+switch)[1:]
+			for a in sa:
+				v=a.split('-')[0]
+				do_action(switch,v)
 	
