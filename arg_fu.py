@@ -26,7 +26,6 @@ def do_action(k,v):
 
 def show_help():
     switches=list(help_mesgs.keys())
-    #mesgs=list(help_mesgs.values())
     switches.sort()
     l=len(switches)
     while l >0:
