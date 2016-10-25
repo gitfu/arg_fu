@@ -48,6 +48,6 @@ def process(data=sys.argv,ordered=None):
         for switch in ordered:
             sa=data.split(" "+switch)[1:]
             for a in sa:
-                v=a.split('-')[0]
+                v=a.split(' -')[0]
                 do_action(switch,v)
     
